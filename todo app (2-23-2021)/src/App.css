@@ -1,0 +1,112 @@
+:root {
+  --backgroundColor: rgba(246, 241, 209);
+  --colorShadeA: rgb(106, 163, 137);
+  --colorShadeB: rgb(121, 186, 156);
+  --colorShadeC: rgb(150, 232, 195);
+  --colorShadeD: rgb(187, 232, 211);
+  --colorShadeE: rgb(205, 255, 232);
+}
+body {
+  background-color: aqua;
+}
+h1 {
+  text-align: center;
+}
+.main-div {
+  background-color: white;
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+.text-inp {
+  background-color: beige;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* border-ra    dius: 25%; */
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px;
+  height: 50px;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+}
+.button-os {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgb(207, 207, 207);
+  cursor: pointer;
+
+  width: 100%;
+  height: 35px;
+  margin: 10px 0px;
+  /* margin-bottom: 50px; */
+  font-size: 18px;
+  background-color: #f9f8fc;
+  border: 2.5px solid #0e172c;
+  transition: background-color 1.5s;
+  transition-duration: 3s;
+  transition: 1.5s;
+}
+
+.button-os:hover {
+  /* position: absolute;
+    top: 30px; */
+  background-color: #c2ecc7;
+  border: none;
+
+  border-radius: 15px;
+  box-shadow: inset 0 0 8px #f9f8fc;
+}
+.big-button {
+  padding: 1em 2em;
+  border: 2px solid var(--colorShadeA);
+ /* position: absolute;
+ left: 200px; */
+ margin-bottom: 10px;
+ margin-left: 10px ;
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+.big-button:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+.big-button:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+.big-button:active {
+  transform: translate(0em, 0.75em);
+}
+.big-button:active::before {
+  transform: translate3d(0, 0, -1em);
+
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+.big-button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+li{
+    list-style-type: decimal;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
