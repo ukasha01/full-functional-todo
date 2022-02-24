@@ -6,7 +6,7 @@ const UseTodo = () => {
         setItem(event.target.value);
     };
     let addItem = (newTodo) => {
-        let  a = newTodo
+        let a = newTodo
         //   console.log(todoArr)
         if (item.length == 0) {
             alert("please Enter the item");
@@ -14,28 +14,34 @@ const UseTodo = () => {
             addArr([...todoArr, a]);
 
             setItem("");
-            
-           
-            
-        } 
-    
-    } 
-    let updateTodo = (ind)=>{
-        
-        
+
+
+
+        }
+
+    }
+    let updateTodo = (ind) => {
+
+
         let updatedArr = [...todoArr]
         updatedArr[ind].isCompleted = !updatedArr[ind].isCompleted
         addArr(updatedArr)
         console.log(updatedArr)
         // console.log(todoArr)
-        
+
     }
-    
-    let editTodo = () => {
-        setItem(editVal);
+
+    let edittodo = (ind) => {
+
         let lst = [...todoArr];
-        lst[editind] = item;
-        editNewArr(lst);
+        setItem(lst[ind].todotext);
+        lst[ind].todotext = item
+
+        addArr(lst)
+        
+
+
+
     };
     let removeArr = (ind) => {
         let arr = [...todoArr];
@@ -43,6 +49,6 @@ const UseTodo = () => {
         arr.splice(ind, 1);
         addArr(arr);
     }
-    return { item, todoArr, showItem, addItem, editTodo,removeArr,updateTodo }
+    return { item, todoArr, showItem, addItem, edittodo, removeArr, updateTodo }
 }
 export default UseTodo
